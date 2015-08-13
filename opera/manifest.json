@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "VK Player Controller",
+  "description": "This is a part of VK Player Controller for OSX. For more information, please visit https://ch1p.com/vkpc/",
+  "version": "3.0",
+  "icons": {
+    "128": "icons/128.png",
+    "16": "icons/16.png",
+    "32": "icons/32.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://vk.com; object-src 'self' 'unsafe-eval'",
+  "permissions": [
+    "tabs",
+    //"background",
+    "https://vk.com/*",
+    "http://vk.com/*",
+    "https://*.vk.com/*",
+    "http://*.vk.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "common.js",
+      "bg.js"
+    ]
+  },
+  "externally_connectable": {
+    "matches": ["https://vk.com/*", "http://vk.com/*", "https://*.vk.com/*", "http://*.vk.com/*"]
+  },
+  "web_accessible_resources": ["inject_and_return.js", "inject_exec.js", "vkpc.js"]
+}
