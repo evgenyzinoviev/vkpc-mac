@@ -32,7 +32,7 @@ VK Player Controller - приложение для OS X, позволяющее 
 Если vk.com открыт по https, браузер запрещает открывать WebSocket-соединение по http. Поэтому в качестве хака скрипт подключается не к 127.0.0.1, а к vkpc-local.ch1p.com, который указывает на 127.0.0.1.
 
 #### libwebsockets
-Для реализации WebSocket используется библиотека libwebsockets (https://github.com/warmcat/libwebsockets).
+Для реализации WebSocket используется библиотека libwebsockets (https://github.com/warmcat/libwebsockets), версии 1.3.
 Нужно собрать ее с поддержкой SSL, установить заголовочные файлы и подключить libwebsockets.dylib к проекту.
 
 # По вопросам
